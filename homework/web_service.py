@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
 import datetime
-import csv
 import numpy as np
 import os
 import sqlite3
@@ -20,8 +19,6 @@ from functions import (
 
 # Inizializzazione
 app = Flask(__name__)
-# Path to the SQLite database file
-# db_path = r'xtream-ai-assignment-developer-main\homework\api_logs.db'
 
 # Function to initialize the SQLite database
 def initialize_db():

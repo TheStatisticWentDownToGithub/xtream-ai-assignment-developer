@@ -44,10 +44,6 @@ y_XGB = diamonds_XGB[target_column]
 X_XGB = diamonds_XGB.drop(columns=[target_column])
 X_train_XGB, X_test_XGB, y_train_XGB, y_test_XGB = train_test_split(X_XGB, y_XGB, test_size=0.2, random_state=42)
 
-#    carat    cut color clarity  depth  table     x     y     z
-# 0    1.1  Ideal     H     SI2   62.0   55.0  6.61  6.65  4.11
-
-
 # Addestramento LM (model_name = 'linear_regression)
 train_and_evaluate_model(
     model_name = 'linear_regression', 

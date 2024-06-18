@@ -1,12 +1,22 @@
 import requests as rq
-# Per lettura file
-from functions import (
-    load_data,
-)
+import pandas as pd
 
 ### PREDICTION ###
 # Data su cui fare prediction
-data_try = load_data(r'C:\Users\daniele\Desktop\esami colloqui\Xtreme\xtream-ai-assignment-developer-main\data\diamonds.csv', nrows=1)
+
+data = {
+    'carat': [1.1],
+    'cut': ['Ideal'],
+    'color': ['H'],
+    'clarity': ['SI2'],
+    'depth': [62.0],
+    'table': [55.0],
+    'price': [4733],
+    'x': [6.61],
+    'y': [6.65],
+    'z': [4.11]
+}
+data_try = pd.DataFrame(data)
 data_try.drop(columns='price', inplace=True)
 
 # Converti il DataFrame in un dizionario
